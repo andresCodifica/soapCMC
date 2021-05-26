@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetUserDetailsRequest xmlns="http://cmcprueba.com/users"
+xsi:schemaLocation="http://cmcprueba.com/users user-details.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id>123</id><!-- numbers-->
+</GetUserDetailsRequest>

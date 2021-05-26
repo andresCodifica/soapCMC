@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetUserDetailsResponse xmlns="http://cmcprueba.com/users"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://cmcprueba.com/users user-details.xsd">
+    <UserDetails>
+    	<id>123</id>
+    	<name>Jhair</name>
+    	<email>janska029@gmail.com</email>
+    	<phone>3208216504</phone>
+    	<authentication>
+    		<lastDate>26/05/2020</lastDate>
+    		<lasthour>15:47</lasthour>
+    		<attempts>3</attempts>
+    	</authentication>
+    </UserDetails>
+</GetUserDetailsResponse>

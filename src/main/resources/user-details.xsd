@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://cmcprueba.com/users" 
+xmlns:tns="http://cmcprueba.com/users" 
+elementFormDefault="qualified">
+	<xs:element name="GetUserDetailsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:int"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetUserDetailsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserDetails" type="tns:UserDetails"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GetAllUserDetailsRequest">
+	</xs:element>
+	<xs:element name="GetAllUserDetailsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserDetails" type="tns:UserDetails"
+							maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="UserDetails">
+		<xs:sequence>
+			<xs:element name="id" type="xs:int"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="email" type="xs:string"/>
+			<xs:element name="phone" type="xs:string"/>
+			<xs:element name="authentication" type="tns:Authentication"/>	
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Authentication">
+		<xs:sequence>
+			<xs:element name="lastDate" type="xs:string"/>
+			<xs:element name="lasthour" type="xs:string"/>
+			<xs:element name="attempts" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>
+
+<!-- 
+<GetCourseDetailsRequest xmlns="http://cmcprueba.com/users">
+	<id>123</id>
+</GetUserDetailsRequest>
+ -->
